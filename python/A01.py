@@ -1,6 +1,6 @@
 # A01 The First Problem
-# submission: https://atcoder.jp/contests/tessoku-book/submissions/38324223
+# submission: https://atcoder.jp/contests/tessoku-book/submissions/38326118
 
-N = int(input())
+n = int(input())
 
-print(N * N)
+print(n * n)
