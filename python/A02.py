@@ -1,10 +1,10 @@
 # A02 Liner Search
-# submission: https://atcoder.jp/contests/tessoku-book/submissions/38325625
+# submission: https://atcoder.jp/contests/tessoku-book/submissions/38326123
 
-N, X = map(int, input().split())
-A = list(map(int, input().split()))
+n, x = map(int, input().split())
+a = list(map(int, input().split()))
 
-if any(Ai == X for Ai in A):
+if any(aa == x for aa in a):
     print('Yes')
 else:
     print('No')
