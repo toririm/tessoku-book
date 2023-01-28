@@ -1,9 +1,9 @@
 // A11 Binary Search 1
-// submission: https://atcoder.jp/contests/tessoku-book/submissions/38363331
+// submission: https://atcoder.jp/contests/tessoku-book/submissions/38365623
 
 use proconio::input;
 
-fn search(list: Vec<u32>, size: usize, y: u32) -> Option<usize> { // 0-based
+fn search(list: &Vec<u32>, size: usize, y: u32) -> Option<usize> { // 0-based
     let mut l = 0;
     let mut r = size - 1;
     while l <= r {
@@ -25,7 +25,7 @@ fn main() {
         x: u32,
         a:[u32; n],
     }
-    match search(a, n, x) {
+    match search(&a, n, x) {
         Some(y) => println!("{}", y + 1), // 1-based
         None => panic!(),
     }
