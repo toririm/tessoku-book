@@ -1,21 +1,22 @@
 // A11 Binary Search 1
-// submisson: https://atcoder.jp/contests/tessoku-book/submissions/38363095
+// submission: https://atcoder.jp/contests/tessoku-book/submissions/38363331
 
 use proconio::input;
 
-// もっといい実装方法ある？
-fn search(list: Vec<u32>, l: usize, r: usize, y: u32) -> usize {
-    if l > r {
-        panic!();
+fn search(list: Vec<u32>, size: usize, y: u32) -> Option<usize> { // 0-based
+    let mut l = 0;
+    let mut r = size - 1;
+    while l <= r {
+        let m = (l + r) / 2;
+        if list[m] < y {
+            l = m + 1;
+        } else if list[m] > y {
+            r = m - 1;
+        } else {
+            return Some(m);
+        }
     }
-    let m = (l + r) / 2;
-    return if list[m] < y {
-        search(list, m + 1, r, y)
-    } else if list[m] > y {
-        search(list, l, m - 1, y)
-    } else {
-        m
-    };
+    return None;
 }
 
 fn main() {
@@ -24,5 +25,8 @@ fn main() {
         x: u32,
         a:[u32; n],
     }
-    println!("{}", search(a, 0, n - 1, x) + 1);
+    match search(a, n, x) {
+        Some(y) => println!("{}", y + 1), // 1-based
+        None => panic!(),
+    }
 }
