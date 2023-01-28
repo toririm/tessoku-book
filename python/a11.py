@@ -16,4 +16,4 @@ def search(y: int) -> int: # 0-based
             r = m - 1
     return -1
 
-print(search(x) + 1)
+print(search(x) + 1) # 1-based
