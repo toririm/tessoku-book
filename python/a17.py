@@ -1,11 +1,10 @@
 # A17 Dungeon 2
-# submission: https://atcoder.jp/contests/tessoku-book/submissions/38501609
 
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
-dp = [10 ** 9] * n
+dp = [10 ** 8] * n
 dp[0] = 0
 
 for i in range(n - 1):
