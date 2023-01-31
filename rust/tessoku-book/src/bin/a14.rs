@@ -1,5 +1,5 @@
 // A14 Four Boxes
-// submission: https://atcoder.jp/contests/tessoku-book/submissions/38477524
+// submission: https://atcoder.jp/contests/tessoku-book/submissions/38500231
 
 use proconio::input;
 
@@ -24,9 +24,9 @@ fn main() {
     q.sort();
     for pp in p {
         let index = q.binary_search(&(k - pp));
-        match index {
-            Ok(_) => {println!("Yes"); return;},
-            Err(_) => {},
+        if index.is_ok() {
+            println!("Yes");
+            return;
         }
     }
     println!("No");
