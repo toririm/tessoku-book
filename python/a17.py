@@ -1,4 +1,5 @@
 # A17 Dungeon 2
+# submission: https://atcoder.jp/contests/tessoku-book/submissions/38501733
 
 n = int(input())
 a = list(map(int, input().split()))
