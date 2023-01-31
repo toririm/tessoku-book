@@ -1,5 +1,5 @@
 # A17 Dungeon 2
-# submission: https://atcoder.jp/contests/tessoku-book/submissions/38501413
+# submission: https://atcoder.jp/contests/tessoku-book/submissions/38501609
 
 n = int(input())
 a = list(map(int, input().split()))
@@ -21,7 +21,7 @@ while i > 0:
     if dp[i] == dp[i - 1] + a[i - 1]:
         p.append(i)
         i = i - 1
-    if i >= 2 and dp[i] == dp[i - 2] + b[i - 2]:
+    if i > 1 and dp[i] == dp[i - 2] + b[i - 2]:
         p.append(i - 1)
         i = i - 2
 
