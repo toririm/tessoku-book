@@ -1,5 +1,5 @@
 # A23 All Free
-# submission: https://atcoder.jp/contests/tessoku-book/submissions/38518895
+# submission: https://atcoder.jp/contests/tessoku-book/submissions/38519365
 
 n, m = map(int, input().split())
 a = [list(map(int, input().split())) for i in range(m)]
@@ -12,7 +12,7 @@ for bit in range(bits):
     for i in range(m):
         new_bit = bit
         for j in range(n):
-            new_bit = new_bit | (a[i][j] << j)
+            new_bit |= (a[i][j] << j)
         dp[i + 1][bit] = min(dp[i + 1][bit], dp[i][bit])
         dp[i + 1][new_bit] = min(dp[i + 1][new_bit], dp[i][bit] + 1)
 
