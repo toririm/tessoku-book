@@ -1,14 +1,14 @@
 // A28 Blackboard
-// submission: https://atcoder.jp/contests/tessoku-book/submissions/38568126
+// submission: https://atcoder.jp/contests/tessoku-book/submissions/38568646
 
 use proconio::input;
 use std::ops::{AddAssign, SubAssign, MulAssign};
 
-const MODULO: i32 = 1_00_00;
+const MODULO: u32 = 1_00_00;
 
 struct Modulo {
-    value: i32,
-    modulo: i32,
+    value: u32,
+    modulo: u32,
 }
 
 impl AddAssign for Modulo {
@@ -29,7 +29,7 @@ impl SubAssign for Modulo {
             panic!("modulo isn't the same");
         }
         *self = Self {
-            value: (self.value - other.value + self.modulo) % self.modulo,
+            value: (self.modulo + self.value - other.value) % self.modulo,
             modulo: self.modulo,
         };
     }
@@ -55,7 +55,7 @@ fn main() {
     for _n in 0..n {
         input!{
             t: char,
-            a: i32,
+            a: u32,
         }
         let aa = Modulo{value: a, modulo: MODULO};
         match t {
