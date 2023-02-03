@@ -51,13 +51,13 @@ fn main() {
     input!{
         n: usize,
     }
-    let mut b = Modulo{value: 0, modulo: MODULO };
+    let mut b = Modulo{value: 0, modulo: MODULO};
     for _n in 0..n {
         input!{
             t: char,
             a: i32,
         }
-        let aa = Modulo{value: a, modulo: MODULO };
+        let aa = Modulo{value: a, modulo: MODULO};
         match t {
             '+' => b += aa,
             '-' => b -= aa,
