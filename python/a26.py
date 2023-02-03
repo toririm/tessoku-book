@@ -1,11 +1,11 @@
 # A26 Prime Check
+# submission: https://atcoder.jp/contests/tessoku-book/submissions/38566244
 
 q = int(input())
 
 MAX = 3 * 10 ** 5
 is_prime = [True] * (MAX + 1) # 1-based
-is_prime[0] = False
-is_prime[1] = False
+is_prime[0:1] = [False, False]
 
 for n in range(MAX + 1):
     if is_prime[n]:
