@@ -18,7 +18,7 @@ fn main() {
     for i in (1..n).rev() {
         max_right[i - 1] = max(max_right[i - 1], max_right[i]);
     }
-    for _dd in 0..d {
+    for _d in 0..d {
         input!{
             mut l: usize,
             mut r: usize,
