@@ -1,5 +1,5 @@
 // A10 Resort Hotel
-// submission: https://atcoder.jp/contests/tessoku-book/submissions/38500737
+// submission: https://atcoder.jp/contests/tessoku-book/submissions/38676822
 
 use proconio::input;
 use std::cmp::max;
