@@ -13,7 +13,7 @@ fn search(list: &Vec<u32>, size: usize, y: u32) -> Option<usize> { // 0-based
         } else if list[m] > y {
             r = m - 1;
         } else {
-            return Some(m);
+            Some(m);
         }
     }
     return None;
